@@ -1,99 +1,74 @@
 /*
   ==============================================================================
 
-   Demonstration "Hello World" application in JUCE
-   Copyright 2008 by Julian Storer.
+   This file is part of the JUCE library.
+   Copyright (c) 2015 - ROLI Ltd.
+
+   Permission is granted to use this software under the terms of either:
+   a) the GPL v2 (or any later version)
+   b) the Affero GPL v3
+
+   Details of these licenses can be found at: www.gnu.org/licenses
+
+   JUCE is distributed in the hope that it will be useful, but WITHOUT ANY
+   WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR
+   A PARTICULAR PURPOSE.  See the GNU General Public License for more details.
+
+   ------------------------------------------------------------------------------
+
+   To release a closed-source product which uses JUCE, commercial licenses are
+   available: visit www.juce.com for more information.
 
   ==============================================================================
 */
 
-#include "../JuceLibraryCode/JuceHeader.h"
-#include "MainComponent.h"
+#include "JuceDemoHeader.h"
+#include "MainWindow.h"
+
+bool invokeChildProcessDemo (const String& commandLine);
 
 //==============================================================================
-/**
-    This is the top-level window that we'll pop up. Inside it, we'll create and
-    show a component from the MainComponent.cpp file (you can open this file using
-    the Jucer to edit it).
-*/
-class HelloWorldWindow  : public DocumentWindow
+class JuceDemoApplication  : public JUCEApplication
 {
 public:
-    //==============================================================================
-    HelloWorldWindow()
-        : DocumentWindow ("JUCE Hello World!",
-                          Colours::lightgrey,
-                          DocumentWindow::allButtons,
-                          true)
-    {
-        // Create an instance of our main content component, and add it to our window..
-        setContentOwned (new MainComponent(), true);
-
-        // Centre the window on the screen
-        centreWithSize (getWidth(), getHeight());
-
-        // And show it!
-        setVisible (true);
-    }
-
-    ~HelloWorldWindow()
-    {
-        // (the content component will be deleted automatically, so no need to do it here)
-    }
-
-    //==============================================================================
-    void closeButtonPressed() override
-    {
-        // When the user presses the close button, we'll tell the app to quit. This
-        // HelloWorldWindow object will be deleted by the JUCEHelloWorldApplication class.
-        JUCEApplication::quit();
-    }
-};
-
-//==============================================================================
-/** This is the application object that is started up when Juce starts. It handles
-    the initialisation and shutdown of the whole application.
-*/
-class JUCEHelloWorldApplication : public JUCEApplication
-{
-public:
-    //==============================================================================
-    JUCEHelloWorldApplication() {}
+    JuceDemoApplication() {}
 
     //==============================================================================
     void initialise (const String& commandLine) override
     {
-        // For this demo, we'll just create the main window...
-        helloWorldWindow = new HelloWorldWindow();
+        //if (invokeChildProcessDemo (commandLine))
+        //    return;
 
-        /*  ..and now return, which will fall into to the main event
-            dispatch loop, and this will run until something calls
-            JUCEAppliction::quit().
+        Desktop::getInstance().setOrientationsEnabled (Desktop::allOrientations);
 
-            In this case, JUCEAppliction::quit() will be called by the
-            hello world window being clicked.
-        */
+        // Do your application's initialisation code here..
+        mainWindow = new MainAppWindow();
     }
 
     void shutdown() override
     {
-        // This method is where you should clear-up your app's resources..
+        // Do your application's shutdown code here..
+        mainWindow = nullptr;
+    }
 
-        // The helloWorldWindow variable is a ScopedPointer, so setting it to a null
-        // pointer will delete the window.
-        helloWorldWindow = nullptr;
+    //==============================================================================
+    void systemRequestedQuit() override
+    {
+        // This gets called when the OS wants our app to quit. You may want to
+        // ask the user to save documents, close windows, etc here, but in this
+        // case we'll just call quit(), which tells the message loop to stop and
+        // allows the app to (asynchronously) exit.
+        quit();
     }
 
     //==============================================================================
     const String getApplicationName() override
     {
-        return "Hello World for JUCE";
+        return "JuceDemo";
     }
 
     const String getApplicationVersion() override
     {
-        // The ProjectInfo::versionString value is automatically updated by the Jucer, and
-        // can be found in the JuceHeader.h file that it generates for our project.
         return ProjectInfo::versionString;
     }
 
@@ -102,15 +77,14 @@ public:
         return true;
     }
 
-    void anotherInstanceStarted (const String& commandLine) override
+    void anotherInstanceStarted (const String& /*commandLine*/) override
     {
     }
 
 private:
-    ScopedPointer<HelloWorldWindow> helloWorldWindow;
+    ScopedPointer<MainAppWindow> mainWindow;
 };
 
-
 //==============================================================================
-// This macro creates the application's main() function..
-START_JUCE_APPLICATION (JUCEHelloWorldApplication)
+// This macro generates the main() routine that starts the app.
+START_JUCE_APPLICATION(JuceDemoApplication)

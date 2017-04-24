@@ -20,6 +20,14 @@
         <MODULEPATH id="juce_data_structures" path="../../modules"/>
         <MODULEPATH id="juce_core" path="../../modules"/>
         <MODULEPATH id="Bach" path="modules"/>
+        <MODULEPATH id="juce_audio_basics" path="../JUCE/modules"/>
+        <MODULEPATH id="juce_audio_devices" path="../JUCE/modules"/>
+        <MODULEPATH id="juce_audio_formats" path="../JUCE/modules"/>
+        <MODULEPATH id="juce_audio_processors" path="../JUCE/modules"/>
+        <MODULEPATH id="juce_audio_utils" path="../JUCE/modules"/>
+        <MODULEPATH id="juce_cryptography" path="../JUCE/modules"/>
+        <MODULEPATH id="juce_opengl" path="../JUCE/modules"/>
+        <MODULEPATH id="juce_video" path="../JUCE/modules"/>
       </MODULEPATHS>
     </XCODE_MAC>
     <VS2015 targetFolder="Builds/VisualStudio2015">
@@ -37,6 +45,14 @@
         <MODULEPATH id="juce_data_structures" path="..\JUCE\modules"/>
         <MODULEPATH id="juce_core" path="..\JUCE\modules"/>
         <MODULEPATH id="Bach" path="modules"/>
+        <MODULEPATH id="juce_audio_basics" path="../JUCE/modules"/>
+        <MODULEPATH id="juce_audio_devices" path="../JUCE/modules"/>
+        <MODULEPATH id="juce_audio_formats" path="../JUCE/modules"/>
+        <MODULEPATH id="juce_audio_processors" path="../JUCE/modules"/>
+        <MODULEPATH id="juce_audio_utils" path="../JUCE/modules"/>
+        <MODULEPATH id="juce_cryptography" path="../JUCE/modules"/>
+        <MODULEPATH id="juce_opengl" path="../JUCE/modules"/>
+        <MODULEPATH id="juce_video" path="../JUCE/modules"/>
       </MODULEPATHS>
     </VS2015>
     <LINUX_MAKE targetFolder="Builds/Linux" vstFolder="~/SDKs/vstsdk2.4">
@@ -54,26 +70,47 @@
         <MODULEPATH id="juce_data_structures" path="../../modules"/>
         <MODULEPATH id="juce_core" path="../../modules"/>
         <MODULEPATH id="Bach" path="modules"/>
+        <MODULEPATH id="juce_audio_basics" path="../JUCE/modules"/>
+        <MODULEPATH id="juce_audio_devices" path="../JUCE/modules"/>
+        <MODULEPATH id="juce_audio_formats" path="../JUCE/modules"/>
+        <MODULEPATH id="juce_audio_processors" path="../JUCE/modules"/>
+        <MODULEPATH id="juce_audio_utils" path="../JUCE/modules"/>
+        <MODULEPATH id="juce_cryptography" path="../JUCE/modules"/>
+        <MODULEPATH id="juce_opengl" path="../JUCE/modules"/>
+        <MODULEPATH id="juce_video" path="../JUCE/modules"/>
       </MODULEPATHS>
     </LINUX_MAKE>
   </EXPORTFORMATS>
   <MAINGROUP id="a0m6ZvX1F" name="BachDev">
-    <GROUP id="GVpTv8yA5" name="Source">
-      <FILE id="wm1yCLKYK" name="Main.cpp" compile="1" resource="0" file="Source/Main.cpp"/>
-      <FILE id="Ir0rGDFpT" name="MainComponent.cpp" compile="1" resource="0"
-            file="Source/MainComponent.cpp"/>
-      <FILE id="Plz1QicEA" name="MainComponent.h" compile="0" resource="0"
-            file="Source/MainComponent.h"/>
-    </GROUP>
+    <GROUP id="GVpTv8yA5" name="Source"/>
+    <FILE id="J0RgVQ" name="AudioSettingsDemo.cpp" compile="1" resource="0"
+          file="Source/AudioSettingsDemo.cpp"/>
+    <FILE id="JUeJ9e" name="AudioSynthesiserDemo.cpp" compile="1" resource="0"
+          file="Source/AudioSynthesiserDemo.cpp"/>
+    <FILE id="fy1pPG" name="DemoUtilities.h" compile="0" resource="0" file="Source/DemoUtilities.h"/>
+    <FILE id="dIh1Rf" name="IntroScreen.cpp" compile="1" resource="0" file="Source/IntroScreen.cpp"/>
+    <FILE id="HwL6cH" name="JuceDemoHeader.h" compile="0" resource="0"
+          file="Source/JuceDemoHeader.h"/>
+    <FILE id="qyt1NP" name="Main.cpp" compile="1" resource="0" file="Source/Main.cpp"/>
+    <FILE id="haS49v" name="MainWindow.cpp" compile="1" resource="0" file="Source/MainWindow.cpp"/>
+    <FILE id="yMgiWS" name="MainWindow.h" compile="0" resource="0" file="Source/MainWindow.h"/>
   </MAINGROUP>
   <JUCEOPTIONS/>
   <MODULES>
     <MODULE id="Bach" showAllCode="1" useLocalCopy="0"/>
+    <MODULE id="juce_audio_basics" showAllCode="1" useLocalCopy="0"/>
+    <MODULE id="juce_audio_devices" showAllCode="1" useLocalCopy="0"/>
+    <MODULE id="juce_audio_formats" showAllCode="1" useLocalCopy="0"/>
+    <MODULE id="juce_audio_processors" showAllCode="1" useLocalCopy="0"/>
+    <MODULE id="juce_audio_utils" showAllCode="1" useLocalCopy="0"/>
     <MODULE id="juce_core" showAllCode="1"/>
+    <MODULE id="juce_cryptography" showAllCode="1" useLocalCopy="0"/>
     <MODULE id="juce_data_structures" showAllCode="1"/>
     <MODULE id="juce_events" showAllCode="1"/>
     <MODULE id="juce_graphics" showAllCode="1"/>
     <MODULE id="juce_gui_basics" showAllCode="1"/>
     <MODULE id="juce_gui_extra" showAllCode="1"/>
+    <MODULE id="juce_opengl" showAllCode="1" useLocalCopy="0"/>
+    <MODULE id="juce_video" showAllCode="1" useLocalCopy="0"/>
   </MODULES>
 </JUCERPROJECT>
