@@ -23,6 +23,7 @@
 		6E85E85F989CB43995D01BAF = {isa = PBXBuildFile; fileRef = D071023526C8D2E38D1C95C5; };
 		C8968AF19911761756A252D4 = {isa = PBXBuildFile; fileRef = 3CDF4F48CC7D9E66D9E409D7; };
 		33218536B5798537DC400AF3 = {isa = PBXBuildFile; fileRef = 3E28B8A3FA17335BF89329BA; };
+		016BA4FFCEA3E2C29F305FBA = {isa = PBXBuildFile; fileRef = A3B6F91D78F6FB4996BC9E7A; };
 		43B767EBA85E90248236BCB1 = {isa = PBXBuildFile; fileRef = 6FE56A964E751BE47A5F6136; };
 		535A340E26E5D6766D1780CA = {isa = PBXBuildFile; fileRef = B3978067F1432E1A2618A5DB; };
 		88EC80B3DF3279A1B67F23FD = {isa = PBXBuildFile; fileRef = FF63C9A3036DB2DDA10269FC; };
@@ -797,6 +798,7 @@
 		A34E6A663D0E9A96996EB9F9 = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "juce_AudioPluginFormat.h"; path = "../../../JUCE/modules/juce_audio_processors/format/juce_AudioPluginFormat.h"; sourceTree = "SOURCE_ROOT"; };
 		A387B8D5928ABA707B55736D = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "juce_CallbackMessage.h"; path = "../../../../modules/juce_events/messages/juce_CallbackMessage.h"; sourceTree = "SOURCE_ROOT"; };
 		A3961F3261459774B65EBD3B = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = "juce_win32_Direct2DGraphicsContext.cpp"; path = "../../../../modules/juce_graphics/native/juce_win32_Direct2DGraphicsContext.cpp"; sourceTree = "SOURCE_ROOT"; };
+		A3B6F91D78F6FB4996BC9E7A = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = CellView.cpp; path = ../../Source/CellView.cpp; sourceTree = "SOURCE_ROOT"; };
 		A41E9E3722172AF6B0721EB1 = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "juce_CoreAudioFormat.h"; path = "../../../JUCE/modules/juce_audio_formats/codecs/juce_CoreAudioFormat.h"; sourceTree = "SOURCE_ROOT"; };
 		A42FDF7379A2708B3726B0BC = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "juce_ResizableCornerComponent.h"; path = "../../../../modules/juce_gui_basics/layout/juce_ResizableCornerComponent.h"; sourceTree = "SOURCE_ROOT"; };
 		A4C303DC411E19BA54A10871 = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "juce_ResizableWindow.h"; path = "../../../../modules/juce_gui_basics/windows/juce_ResizableWindow.h"; sourceTree = "SOURCE_ROOT"; };
@@ -1263,6 +1265,7 @@
 					39BDB517F5C4ED09B374411D,
 					3CDF4F48CC7D9E66D9E409D7,
 					3E28B8A3FA17335BF89329BA,
+					A3B6F91D78F6FB4996BC9E7A,
 					03C5EA1150C2B94FF2202B8F,
 					6FE56A964E751BE47A5F6136,
 					7DBADB29924888845A2326E1,
@@ -2826,6 +2829,7 @@
 		C39352E04613E968B30D0584 = {isa = PBXSourcesBuildPhase; buildActionMask = 2147483647; files = (
 					C8968AF19911761756A252D4,
 					33218536B5798537DC400AF3,
+					016BA4FFCEA3E2C29F305FBA,
 					43B767EBA85E90248236BCB1,
 					535A340E26E5D6766D1780CA,
 					88EC80B3DF3279A1B67F23FD,

@@ -87,6 +87,7 @@
           file="Source/AudioSettingsDemo.cpp"/>
     <FILE id="JUeJ9e" name="AudioSynthesiserDemo.cpp" compile="1" resource="0"
           file="Source/AudioSynthesiserDemo.cpp"/>
+    <FILE id="H5t2Dl" name="CellView.cpp" compile="1" resource="0" file="Source/CellView.cpp"/>
     <FILE id="fy1pPG" name="DemoUtilities.h" compile="0" resource="0" file="Source/DemoUtilities.h"/>
     <FILE id="dIh1Rf" name="IntroScreen.cpp" compile="1" resource="0" file="Source/IntroScreen.cpp"/>
     <FILE id="HwL6cH" name="JuceDemoHeader.h" compile="0" resource="0"

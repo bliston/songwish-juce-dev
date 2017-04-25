@@ -66,6 +66,7 @@ endif
 OBJECTS := \
   $(JUCE_OBJDIR)/AudioSettingsDemo_5f2b3efd.o \
   $(JUCE_OBJDIR)/AudioSynthesiserDemo_2e6adf97.o \
+  $(JUCE_OBJDIR)/CellView_276d0630.o \
   $(JUCE_OBJDIR)/IntroScreen_73347059.o \
   $(JUCE_OBJDIR)/Main_90ebc5c2.o \
   $(JUCE_OBJDIR)/MainWindow_499ac812.o \
@@ -114,6 +115,11 @@ $(JUCE_OBJDIR)/AudioSettingsDemo_5f2b3efd.o: ../../Source/AudioSettingsDemo.cpp
 $(JUCE_OBJDIR)/AudioSynthesiserDemo_2e6adf97.o: ../../Source/AudioSynthesiserDemo.cpp
 	-@mkdir -p $(JUCE_OBJDIR)
 	@echo "Compiling AudioSynthesiserDemo.cpp"
+	$(V_AT)$(CXX) $(JUCE_CXXFLAGS) -o "$@" -c "$<"
+
+$(JUCE_OBJDIR)/CellView_276d0630.o: ../../Source/CellView.cpp
+	-@mkdir -p $(JUCE_OBJDIR)
+	@echo "Compiling CellView.cpp"
 	$(V_AT)$(CXX) $(JUCE_CXXFLAGS) -o "$@" -c "$<"
 
 $(JUCE_OBJDIR)/IntroScreen_73347059.o: ../../Source/IntroScreen.cpp

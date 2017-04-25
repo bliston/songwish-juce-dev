@@ -133,6 +133,7 @@
   <ItemGroup>
     <ClCompile Include="..\..\Source\AudioSettingsDemo.cpp"/>
     <ClCompile Include="..\..\Source\AudioSynthesiserDemo.cpp"/>
+    <ClCompile Include="..\..\Source\CellView.cpp"/>
     <ClCompile Include="..\..\Source\IntroScreen.cpp"/>
     <ClCompile Include="..\..\Source\Main.cpp"/>
     <ClCompile Include="..\..\Source\MainWindow.cpp"/>

@@ -379,6 +379,9 @@
     <ClCompile Include="..\..\Source\AudioSynthesiserDemo.cpp">
       <Filter>BachDev</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\Source\CellView.cpp">
+      <Filter>BachDev</Filter>
+    </ClCompile>
     <ClCompile Include="..\..\Source\IntroScreen.cpp">
       <Filter>BachDev</Filter>
     </ClCompile>
