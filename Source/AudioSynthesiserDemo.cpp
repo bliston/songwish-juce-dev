@@ -300,8 +300,16 @@ private:
     //==============================================================================
     void buttonClicked (Button* buttonThatWasClicked) override
     {
-        if (buttonThatWasClicked == &sineButton)
-            synthAudioSource.setUsingSineWaveSound();
+		if (buttonThatWasClicked == &sineButton) {
+			synthAudioSource.setUsingSineWaveSound();
+			Bach::ChordReader cr;
+			for (auto n : cr.midiChord("M7", 69)) {
+				MidiMessage m = MidiMessage::noteOn(1, n, (uint8)127);
+				m.setTimeStamp(100);
+				synthAudioSource.midiCollector.addMessageToQueue(m);
+			}
+
+		}
         else if (buttonThatWasClicked == &sampledButton)
             synthAudioSource.setUsingSampledSound();
     }
