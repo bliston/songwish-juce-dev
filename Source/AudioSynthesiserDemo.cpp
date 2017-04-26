@@ -252,6 +252,10 @@ public:
         sampledButton.setRadioGroupId (321);
         sampledButton.addListener (this);
 
+		addAndMakeVisible(chordLabel);
+		chordLabel.setEditable(true);
+		chordLabel.setText("M7", dontSendNotification);
+
         //addAndMakeVisible (liveAudioDisplayComp);
 
         //deviceManager.addAudioCallback (&liveAudioDisplayComp);
@@ -284,6 +288,7 @@ public:
         keyboardComponent.setBounds (8, 96, getWidth() - 16, 64);
         sineButton.setBounds (16, 176, 150, 24);
         sampledButton.setBounds (16, 200, 150, 24);
+		chordLabel.setBounds(16, 226, 150, 24);
         //liveAudioDisplayComp.setBounds (8, 8, getWidth() - 16, 64);
     }
 
@@ -295,6 +300,7 @@ private:
     MidiKeyboardComponent keyboardComponent;
     ToggleButton sineButton;
     ToggleButton sampledButton;
+	Label chordLabel;
     //LiveScrollingAudioDisplay liveAudioDisplayComp;
 
     //==============================================================================
@@ -303,7 +309,9 @@ private:
 		if (buttonThatWasClicked == &sineButton) {
 			synthAudioSource.setUsingSineWaveSound();
 			Bach::ChordReader cr;
-			for (auto n : cr.midiChord("M7", 69)) {
+			synthAudioSource.synth.allNotesOff(0, true);
+			keyboardState.allNotesOff(0);
+			for (auto n : cr.midiChord(chordLabel.getText(), 57)) {
 				MidiMessage m = MidiMessage::noteOn(1, n, (uint8)127);
 				m.setTimeStamp(100);
 				synthAudioSource.midiCollector.addMessageToQueue(m);
