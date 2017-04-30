@@ -9,6 +9,7 @@
 */
 
 #include "JuceDemoHeader.h"
+#include "MidiPlayer.h"
 
 //==============================================================================
 class ValueTreeItem  : public TreeViewItem,
@@ -167,6 +168,8 @@ public:
         deleteButton.addListener (this);
         
         startTimer (500);
+    
+
     }
     
     ~ValueTreesDemo()
@@ -253,6 +256,18 @@ public:
             if (v.getParent().isValid())
                 v.addChild (createTree ("split item"), v.getParent().indexOf(v), &undoManager);
         }
+        
+        midiPlayer.addNote(80, 120, 0, 1);
+        midiPlayer.addNote(82, 120, 1, .5);
+        midiPlayer.addNote(84, 120, 1.5, .5);
+        midiPlayer.addNote(86, 120, 2, .25);
+        midiPlayer.addNote(87, 120, 2.25, .25);
+        midiPlayer.addNote(88, 120, 2.5, .25);
+        midiPlayer.addNote(89, 120, 2.75, .25);
+        midiPlayer.addNote(88, 120, 3, .333333);
+        midiPlayer.addNote(88, 120, 3.333333, .333333);
+        midiPlayer.addNote(88, 120, 3.666666, .333333);
+        midiPlayer.addNote(80, 120, 4, 1);
     }
     
     
@@ -297,6 +312,7 @@ private:
     TextButton undoButton, redoButton, addButton, deleteButton;
     ScopedPointer<ValueTreeItem> rootItem;
     UndoManager undoManager;
+    MidiPLayer midiPlayer;
     
     void timerCallback() override
     {

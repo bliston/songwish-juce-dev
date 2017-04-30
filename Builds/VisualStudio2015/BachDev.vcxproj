@@ -1726,6 +1726,7 @@
     <ClCompile Include="..\..\JuceLibraryCode\juce_video.cpp"/>
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="..\..\Source\MidiPlayer.h"/>
     <ClInclude Include="..\..\Source\DemoUtilities.h"/>
     <ClInclude Include="..\..\Source\JuceDemoHeader.h"/>
     <ClInclude Include="..\..\Source\MainWindow.h"/>
