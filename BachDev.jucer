@@ -83,6 +83,8 @@
   </EXPORTFORMATS>
   <MAINGROUP id="a0m6ZvX1F" name="BachDev">
     <GROUP id="GVpTv8yA5" name="Source"/>
+    <FILE id="Fwkw1Q" name="TreePlayer.h" compile="1" resource="0" file="Source/TreePlayer.h"/>
+    <FILE id="qcPfpT" name="ValueTreeItem.h" compile="1" resource="0" file="Source/ValueTreeItem.h"/>
     <FILE id="IenFfY" name="MidiPlayer.h" compile="1" resource="0" file="Source/MidiPlayer.h"/>
     <FILE id="J0RgVQ" name="AudioSettingsDemo.cpp" compile="1" resource="0"
           file="Source/AudioSettingsDemo.cpp"/>

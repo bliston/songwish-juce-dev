@@ -17,6 +17,18 @@
     <Filter Include="Juce Modules\Bach\Bach">
       <UniqueIdentifier>{DA559912-F8F4-92C3-F7CA-E85A2CB241A9}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Juce Modules\Bach\Bach\MusicalStructures">
+      <UniqueIdentifier>{D8BCD4F9-1CAA-ED05-DE3B-C79432056C07}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Juce Modules\Bach\Bach\MusicalStructures\Chord">
+      <UniqueIdentifier>{39695E53-B52D-C57C-E6CC-03B18213FA1C}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Juce Modules\Bach\Bach\MusicalStructures\Note">
+      <UniqueIdentifier>{C5E6516D-11A6-C3A6-B760-83970D4971AF}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Juce Modules\Bach\Bach\Utils">
+      <UniqueIdentifier>{6F4C8EA5-655A-0702-2570-F8AFEFB28BA1}</UniqueIdentifier>
+    </Filter>
     <Filter Include="Juce Modules\juce_audio_basics">
       <UniqueIdentifier>{3247ED97-A75A-F50B-8CCC-46155E895806}</UniqueIdentifier>
     </Filter>
@@ -391,8 +403,20 @@
     <ClCompile Include="..\..\Source\MainWindow.cpp">
       <Filter>BachDev</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\modules\Bach\Bach\ChordReader.cpp">
-      <Filter>Juce Modules\Bach\Bach</Filter>
+    <ClCompile Include="..\..\modules\Bach\Bach\MusicalStructures\Chord\Chord.cpp">
+      <Filter>Juce Modules\Bach\Bach\MusicalStructures\Chord</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\modules\Bach\Bach\MusicalStructures\Chord\ChordNameToMidiNotes.cpp">
+      <Filter>Juce Modules\Bach\Bach\MusicalStructures\Chord</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\modules\Bach\Bach\MusicalStructures\Chord\MidiNotesToChordName.cpp">
+      <Filter>Juce Modules\Bach\Bach\MusicalStructures\Chord</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\modules\Bach\Bach\MusicalStructures\Note\Note.cpp">
+      <Filter>Juce Modules\Bach\Bach\MusicalStructures\Note</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\modules\Bach\Bach\Utils\MidiUtils.cpp">
+      <Filter>Juce Modules\Bach\Bach\Utils</Filter>
     </ClCompile>
     <ClCompile Include="..\..\modules\Bach\Bach.cpp">
       <Filter>Juce Modules\Bach</Filter>
@@ -2136,6 +2160,12 @@
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="..\..\Source\TreePlayer.h">
+      <Filter>BachDev</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\ValueTreeItem.h">
+      <Filter>BachDev</Filter>
+    </ClInclude>
     <ClInclude Include="..\..\Source\MidiPlayer.h">
       <Filter>BachDev</Filter>
     </ClInclude>
@@ -2148,10 +2178,22 @@
     <ClInclude Include="..\..\Source\MainWindow.h">
       <Filter>BachDev</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\modules\Bach\Bach\BachCommon.h">
-      <Filter>Juce Modules\Bach\Bach</Filter>
+    <ClInclude Include="..\..\modules\Bach\Bach\MusicalStructures\Chord\Chord.h">
+      <Filter>Juce Modules\Bach\Bach\MusicalStructures\Chord</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\modules\Bach\Bach\ChordReader.h">
+    <ClInclude Include="..\..\modules\Bach\Bach\MusicalStructures\Chord\ChordNameToMidiNotes.h">
+      <Filter>Juce Modules\Bach\Bach\MusicalStructures\Chord</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\modules\Bach\Bach\MusicalStructures\Chord\MidiNotesToChordName.h">
+      <Filter>Juce Modules\Bach\Bach\MusicalStructures\Chord</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\modules\Bach\Bach\MusicalStructures\Note\Note.h">
+      <Filter>Juce Modules\Bach\Bach\MusicalStructures\Note</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\modules\Bach\Bach\Utils\MidiUtils.h">
+      <Filter>Juce Modules\Bach\Bach\Utils</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\modules\Bach\Bach\BachCommon.h">
       <Filter>Juce Modules\Bach\Bach</Filter>
     </ClInclude>
     <ClInclude Include="..\..\modules\Bach\Bach.h">

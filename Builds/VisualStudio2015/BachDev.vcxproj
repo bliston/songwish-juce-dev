@@ -137,7 +137,19 @@
     <ClCompile Include="..\..\Source\IntroScreen.cpp"/>
     <ClCompile Include="..\..\Source\Main.cpp"/>
     <ClCompile Include="..\..\Source\MainWindow.cpp"/>
-    <ClCompile Include="..\..\modules\Bach\Bach\ChordReader.cpp">
+    <ClCompile Include="..\..\modules\Bach\Bach\MusicalStructures\Chord\Chord.cpp">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\..\modules\Bach\Bach\MusicalStructures\Chord\ChordNameToMidiNotes.cpp">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\..\modules\Bach\Bach\MusicalStructures\Chord\MidiNotesToChordName.cpp">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\..\modules\Bach\Bach\MusicalStructures\Note\Note.cpp">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\..\modules\Bach\Bach\Utils\MidiUtils.cpp">
       <ExcludedFromBuild>true</ExcludedFromBuild>
     </ClCompile>
     <ClCompile Include="..\..\modules\Bach\Bach.cpp">
@@ -1726,12 +1738,18 @@
     <ClCompile Include="..\..\JuceLibraryCode\juce_video.cpp"/>
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="..\..\Source\TreePlayer.h"/>
+    <ClInclude Include="..\..\Source\ValueTreeItem.h"/>
     <ClInclude Include="..\..\Source\MidiPlayer.h"/>
     <ClInclude Include="..\..\Source\DemoUtilities.h"/>
     <ClInclude Include="..\..\Source\JuceDemoHeader.h"/>
     <ClInclude Include="..\..\Source\MainWindow.h"/>
+    <ClInclude Include="..\..\modules\Bach\Bach\MusicalStructures\Chord\Chord.h"/>
+    <ClInclude Include="..\..\modules\Bach\Bach\MusicalStructures\Chord\ChordNameToMidiNotes.h"/>
+    <ClInclude Include="..\..\modules\Bach\Bach\MusicalStructures\Chord\MidiNotesToChordName.h"/>
+    <ClInclude Include="..\..\modules\Bach\Bach\MusicalStructures\Note\Note.h"/>
+    <ClInclude Include="..\..\modules\Bach\Bach\Utils\MidiUtils.h"/>
     <ClInclude Include="..\..\modules\Bach\Bach\BachCommon.h"/>
-    <ClInclude Include="..\..\modules\Bach\Bach\ChordReader.h"/>
     <ClInclude Include="..\..\modules\Bach\Bach.h"/>
     <ClInclude Include="..\..\modules\Bach\Bach.h"/>
     <ClInclude Include="..\..\..\JUCE\modules\juce_audio_basics\buffers\juce_AudioChannelSet.h"/>

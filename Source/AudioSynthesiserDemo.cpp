@@ -38,20 +38,13 @@ public:
     {
         addAndMakeVisible (keyboardComponent);
 
-        addAndMakeVisible (sineButton);
-        sineButton.setButtonText ("Use sine wave");
-        sineButton.setRadioGroupId (321);
-        sineButton.addListener (this);
-        sineButton.setToggleState (true, dontSendNotification);
-
-        addAndMakeVisible (sampledButton);
-        sampledButton.setButtonText ("Use sampled sound");
-        sampledButton.setRadioGroupId (321);
-        sampledButton.addListener (this);
+        addAndMakeVisible (playButton);
+        playButton.setButtonText ("Play");
+		playButton.addListener (this);
 
 		addAndMakeVisible(chordLabel);
 		chordLabel.setEditable(true);
-		chordLabel.setText("M7", dontSendNotification);
+		chordLabel.setText("CM7", dontSendNotification);
 
         //addAndMakeVisible (liveAudioDisplayComp);
 
@@ -83,8 +76,7 @@ public:
     void resized() override
     {
         keyboardComponent.setBounds (8, 96, getWidth() - 16, 64);
-        sineButton.setBounds (16, 176, 150, 24);
-        sampledButton.setBounds (16, 200, 150, 24);
+		playButton.setBounds (16, 176, 150, 24);
 		chordLabel.setBounds(16, 226, 150, 24);
         //liveAudioDisplayComp.setBounds (8, 8, getWidth() - 16, 64);
     }
@@ -95,23 +87,30 @@ private:
     AudioSourcePlayer audioSourcePlayer;
     SynthAudioSource synthAudioSource;
     MidiKeyboardComponent keyboardComponent;
-    ToggleButton sineButton;
-    ToggleButton sampledButton;
+    TextButton playButton;
 	Label chordLabel;
     //LiveScrollingAudioDisplay liveAudioDisplayComp;
     MidiPLayer midiPlayer;
+	int i = 0;
 
     //==============================================================================
     void buttonClicked (Button* buttonThatWasClicked) override
     {
-		if (buttonThatWasClicked == &sineButton) {
-			Bach::ChordReader cr;
+		if (buttonThatWasClicked == &playButton) {
 			keyboardState.allNotesOff(0);
-			for (auto n : cr.midiChord(chordLabel.getText(), 57)) {
-                midiPlayer.addNote(n, 120, 0, 1);
+			Bach::MidiUtils mUtils;
+			//Bach::Chord c(chordLabel.getText());
+			
+			Bach::Chord c("C" + mUtils.SUPPORTED_CHORD_TYPES.getUnchecked(i));
+			playButton.setButtonText("C" + mUtils.SUPPORTED_CHORD_TYPES.getUnchecked(i));
+			for (auto n : c.getMidiNoteNumbers()) {
+				midiPlayer.addNote(n, 120, 0, 1);
+				MidiMessage message = MidiMessage::noteOn(1, n, (uint8)100);
+				keyboardState.processNextMidiEvent(message);
 			}
-
+			
 		}
+		i++;
     }
 
     JUCE_DECLARE_NON_COPYABLE_WITH_LEAK_DETECTOR (AudioSynthesiserDemo)
