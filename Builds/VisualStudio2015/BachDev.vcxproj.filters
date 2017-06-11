@@ -415,6 +415,9 @@
     <ClCompile Include="..\..\modules\Bach\Bach\MusicalStructures\Note\Note.cpp">
       <Filter>Juce Modules\Bach\Bach\MusicalStructures\Note</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\modules\Bach\Bach\Utils\DataUtils.cpp">
+      <Filter>Juce Modules\Bach\Bach\Utils</Filter>
+    </ClCompile>
     <ClCompile Include="..\..\modules\Bach\Bach\Utils\MidiUtils.cpp">
       <Filter>Juce Modules\Bach\Bach\Utils</Filter>
     </ClCompile>
@@ -2189,6 +2192,9 @@
     </ClInclude>
     <ClInclude Include="..\..\modules\Bach\Bach\MusicalStructures\Note\Note.h">
       <Filter>Juce Modules\Bach\Bach\MusicalStructures\Note</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\modules\Bach\Bach\Utils\DataUtils.h">
+      <Filter>Juce Modules\Bach\Bach\Utils</Filter>
     </ClInclude>
     <ClInclude Include="..\..\modules\Bach\Bach\Utils\MidiUtils.h">
       <Filter>Juce Modules\Bach\Bach\Utils</Filter>

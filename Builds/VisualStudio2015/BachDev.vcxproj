@@ -149,6 +149,9 @@
     <ClCompile Include="..\..\modules\Bach\Bach\MusicalStructures\Note\Note.cpp">
       <ExcludedFromBuild>true</ExcludedFromBuild>
     </ClCompile>
+    <ClCompile Include="..\..\modules\Bach\Bach\Utils\DataUtils.cpp">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </ClCompile>
     <ClCompile Include="..\..\modules\Bach\Bach\Utils\MidiUtils.cpp">
       <ExcludedFromBuild>true</ExcludedFromBuild>
     </ClCompile>
@@ -1748,6 +1751,7 @@
     <ClInclude Include="..\..\modules\Bach\Bach\MusicalStructures\Chord\ChordNameToMidiNotes.h"/>
     <ClInclude Include="..\..\modules\Bach\Bach\MusicalStructures\Chord\MidiNotesToChordName.h"/>
     <ClInclude Include="..\..\modules\Bach\Bach\MusicalStructures\Note\Note.h"/>
+    <ClInclude Include="..\..\modules\Bach\Bach\Utils\DataUtils.h"/>
     <ClInclude Include="..\..\modules\Bach\Bach\Utils\MidiUtils.h"/>
     <ClInclude Include="..\..\modules\Bach\Bach\BachCommon.h"/>
     <ClInclude Include="..\..\modules\Bach\Bach.h"/>
