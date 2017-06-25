@@ -113,7 +113,7 @@ public:
         lookAndFeelV3.setColour (Label::textColourId, Colours::white);
         lookAndFeelV3.setColour (Label::textColourId, Colours::white);
         lookAndFeelV3.setColour (ToggleButton::textColourId, Colours::white);
-        LookAndFeel::setDefaultLookAndFeel (&lookAndFeelV3);
+        LookAndFeel::setDefaultLookAndFeel (&lookAndPeel);
 
         demoList.setModel (this);
         demoList.setColour (ListBox::backgroundColourId, Colour::greyLevel (0.2f));
@@ -238,7 +238,7 @@ public:
 private:
     ListBox demoList;
     ScopedPointer<Component> currentDemo;
-
+	Peels::MiddleLookAndFeel lookAndPeel;
     LookAndFeel_V1 lookAndFeelV1;
     LookAndFeel_V2 lookAndFeelV2;
     LookAndFeel_V3 lookAndFeelV3;

@@ -85,6 +85,7 @@ OBJECTS := \
   $(JUCE_OBJDIR)/juce_gui_extra_4a026f23.o \
   $(JUCE_OBJDIR)/juce_opengl_cd70b4c2.o \
   $(JUCE_OBJDIR)/juce_video_f128c512.o \
+  $(JUCE_OBJDIR)/Peels_14e67ef8.o \
 
 .PHONY: clean
 
@@ -210,6 +211,11 @@ $(JUCE_OBJDIR)/juce_opengl_cd70b4c2.o: ../../JuceLibraryCode/juce_opengl.cpp
 $(JUCE_OBJDIR)/juce_video_f128c512.o: ../../JuceLibraryCode/juce_video.cpp
 	-@mkdir -p $(JUCE_OBJDIR)
 	@echo "Compiling juce_video.cpp"
+	$(V_AT)$(CXX) $(JUCE_CXXFLAGS) -o "$@" -c "$<"
+
+$(JUCE_OBJDIR)/Peels_14e67ef8.o: ../../JuceLibraryCode/Peels.cpp
+	-@mkdir -p $(JUCE_OBJDIR)
+	@echo "Compiling Peels.cpp"
 	$(V_AT)$(CXX) $(JUCE_CXXFLAGS) -o "$@" -c "$<"
 
 -include $(OBJECTS:%.o=%.d)

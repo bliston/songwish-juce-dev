@@ -28,6 +28,7 @@
         <MODULEPATH id="juce_cryptography" path="../JUCE/modules"/>
         <MODULEPATH id="juce_opengl" path="../JUCE/modules"/>
         <MODULEPATH id="juce_video" path="../JUCE/modules"/>
+        <MODULEPATH id="Peels" path="modules"/>
       </MODULEPATHS>
     </XCODE_MAC>
     <VS2015 targetFolder="Builds/VisualStudio2015">
@@ -53,6 +54,7 @@
         <MODULEPATH id="juce_cryptography" path="../JUCE/modules"/>
         <MODULEPATH id="juce_opengl" path="../JUCE/modules"/>
         <MODULEPATH id="juce_video" path="../JUCE/modules"/>
+        <MODULEPATH id="Peels" path="modules"/>
       </MODULEPATHS>
     </VS2015>
     <LINUX_MAKE targetFolder="Builds/Linux" vstFolder="~/SDKs/vstsdk2.4">
@@ -78,6 +80,7 @@
         <MODULEPATH id="juce_cryptography" path="../JUCE/modules"/>
         <MODULEPATH id="juce_opengl" path="../JUCE/modules"/>
         <MODULEPATH id="juce_video" path="../JUCE/modules"/>
+        <MODULEPATH id="Peels" path="modules"/>
       </MODULEPATHS>
     </LINUX_MAKE>
   </EXPORTFORMATS>
@@ -116,5 +119,6 @@
     <MODULE id="juce_gui_extra" showAllCode="1"/>
     <MODULE id="juce_opengl" showAllCode="1" useLocalCopy="0"/>
     <MODULE id="juce_video" showAllCode="1" useLocalCopy="0"/>
+    <MODULE id="Peels" showAllCode="1" useLocalCopy="0"/>
   </MODULES>
 </JUCERPROJECT>
