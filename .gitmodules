@@ -1,3 +1,6 @@
 [submodule "modules/Bach"]
 	path = modules/Bach
 	url = https://github.com/bliston/Bach.git
+[submodule "modules/peels"]
+	path = modules/peels
+	url = https://github.com/bliston/peels.git
